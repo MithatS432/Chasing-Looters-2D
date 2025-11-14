@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.Rendering.Universal; // Light2D için gerekli
+
 
 public class ScreenShake : MonoBehaviour
 {
@@ -8,12 +11,23 @@ public class ScreenShake : MonoBehaviour
     public float shakeDuration = 0.5f;
     public float shakeMagnitude = 0.1f;
 
+    [Header("Scene Darken Settings")]
+    public Image darkenPanel;
+    public float darkenAmount = 0.5f;
+    public float darkenDuration = 0.2f;
+
     private Vector3 originalPosition;
     private bool isShaking = false;
 
+    [Header("Scene Light Flash")]
+    public Light2D sceneLight;
+    public float flashIntensity = 3f;
+    public float flashTime = 0.05f;
     void Start()
     {
         originalPosition = transform.localPosition;
+        if (darkenPanel != null)
+            darkenPanel.color = new Color(0, 0, 0, 0);
     }
 
     public void TriggerShake()
@@ -21,6 +35,10 @@ public class ScreenShake : MonoBehaviour
         if (!isShaking)
         {
             StartCoroutine(Shake());
+            if (darkenPanel != null)
+                StartCoroutine(TemporaryDarken());
+            if (sceneLight != null)
+                StartCoroutine(LightFlash());
         }
     }
 
@@ -42,5 +60,19 @@ public class ScreenShake : MonoBehaviour
 
         transform.localPosition = originalPosition;
         isShaking = false;
+    }
+
+    IEnumerator TemporaryDarken()
+    {
+        darkenPanel.color = new Color(0, 0, 0, darkenAmount);
+        yield return new WaitForSeconds(darkenDuration);
+        darkenPanel.color = new Color(0, 0, 0, 0);
+    }
+    IEnumerator LightFlash()
+    {
+        float original = sceneLight.intensity;
+        sceneLight.intensity = flashIntensity;
+        yield return new WaitForSeconds(flashTime);
+        sceneLight.intensity = original;
     }
 }

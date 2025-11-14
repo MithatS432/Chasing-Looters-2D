@@ -9,7 +9,8 @@ public class CursorAndClickSound : MonoBehaviour
 
     [Header("Click Sound Settings")]
     public AudioSource clickAudio;
-    public GameObject purpleEffectPrefab;
+    public GameObject[] effectPrefabs;
+    private int effectIndex = 0;
 
     void Start()
     {
@@ -24,14 +25,20 @@ public class CursorAndClickSound : MonoBehaviour
             {
                 clickAudio.PlayOneShot(clickAudio.clip);
             }
-            if (purpleEffectPrefab != null)
+
+            if (effectPrefabs != null && effectPrefabs.Length > 0)
             {
                 Vector3 mousePosition = Input.mousePosition;
                 mousePosition.z = Camera.main.nearClipPlane + 0.5f;
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
                 worldPosition.z = 0f;
-                GameObject purpleEffect = Instantiate(purpleEffectPrefab, worldPosition, Quaternion.identity);
-                Destroy(purpleEffect, 3f);
+
+                GameObject effect = Instantiate(effectPrefabs[effectIndex], worldPosition, Quaternion.identity);
+                Destroy(effect, 3f);
+
+                effectIndex++;
+                if (effectIndex >= effectPrefabs.Length)
+                    effectIndex = 0;
             }
         }
     }
