@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6270745211747929577}
   - component: {fileID: 2816324316699342426}
   - component: {fileID: 217440542243888201}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4947,7 +4947,7 @@ GameObject:
   - component: {fileID: 8440171760632619150}
   - component: {fileID: 5774021493654583103}
   - component: {fileID: 3387600702192613277}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Purple Death Particle URP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4990,7 +4990,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -9798,7 +9798,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 7
   m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -9842,7 +9842,7 @@ GameObject:
   - component: {fileID: 8649898827604476533}
   - component: {fileID: 788525976673293888}
   - component: {fileID: 218641436563849796}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9881,7 +9881,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -14733,7 +14733,7 @@ GameObject:
   - component: {fileID: 7239634273445991569}
   - component: {fileID: 2277462132745441620}
   - component: {fileID: 7324234396232806681}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Poof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14772,7 +14772,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -19633,7 +19633,7 @@ GameObject:
   - component: {fileID: 7523799225617017893}
   - component: {fileID: 3385336442486044605}
   - component: {fileID: 4927599761965102733}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Soul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19672,7 +19672,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:

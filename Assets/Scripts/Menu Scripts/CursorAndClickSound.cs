@@ -27,7 +27,7 @@ public class CursorAndClickSound : MonoBehaviour
             if (purpleEffectPrefab != null)
             {
                 Vector3 mousePosition = Input.mousePosition;
-                mousePosition.z = 10f;
+                mousePosition.z = Camera.main.nearClipPlane + 0.5f;
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
                 worldPosition.z = 0f;
                 GameObject purpleEffect = Instantiate(purpleEffectPrefab, worldPosition, Quaternion.identity);
