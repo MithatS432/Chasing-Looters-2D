@@ -12,6 +12,14 @@ public class CursorAndClickSound : MonoBehaviour
     public GameObject[] effectPrefabs;
     private int effectIndex = 0;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        if (clickAudio != null)
+        {
+            DontDestroyOnLoad(clickAudio.gameObject);
+        }
+    }
     void Start()
     {
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
