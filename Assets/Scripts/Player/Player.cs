@@ -16,6 +16,15 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed;
     private float attackIndex = 0f;
 
+    float maxHealth = 500f;
+    public float currentHealth;
+    public int coinCount = 0;
+
+    [Header("Player UI Settings")]
+    public GameObject[] healthBars;
+    public TextMeshProUGUI coinText;
+
+
     [Header("Player Audio Settings")]
     public AudioClip[] playerSounds;
     private float stepTimer = 0f;
@@ -28,10 +37,13 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
+        currentHealth = maxHealth;
+        UpdateHealthUI();
     }
 
     void Update()
     {
+        GetDamage(1f);
         speed = Input.GetKey(KeyCode.LeftShift) ? 18f : 12f;
         HandleFootsteps();
 
@@ -40,16 +52,23 @@ public class Player : MonoBehaviour
         else if (prb.linearVelocity.x < 0)
             spriteRenderer.flipX = true;
 
+
         if (Input.GetMouseButtonDown(0))
         {
             anim.SetFloat("attackIndex", attackIndex);
             anim.SetTrigger("Attack");
+            audioSource.PlayOneShot(playerSounds[1]);
 
             attackIndex++;
             if (attackIndex > 2f) attackIndex = 0f;
         }
+
         if (Input.GetKeyDown(KeyCode.Q))
+        {
+            audioSource.PlayOneShot(playerSounds[2]);
             anim.SetTrigger("Shield");
+        }
+
         if (Input.GetKeyDown(KeyCode.C))
             anim.SetTrigger("Tumble");
 
@@ -81,8 +100,32 @@ public class Player : MonoBehaviour
         prb.linearVelocity = move * speed;
         anim.SetFloat("Speed", Mathf.Abs(x) + Mathf.Abs(y));
     }
-    private void OnCollisionEnter2D(Collision2D other)
+
+    public void TakeDamage(float damage)
     {
 
     }
+
+    public void GetDamage(float damage)
+    {
+        currentHealth -= damage;
+        UpdateHealthUI();
+    }
+    void UpdateHealthUI()
+    {
+        float healthFraction = currentHealth / maxHealth;
+
+        foreach (GameObject barObj in healthBars)
+        {
+            Transform bar = barObj.transform;
+
+            bool full = healthFraction > 0.5f;
+            bool half = healthFraction > 0.2f && healthFraction <= 0.5f;
+
+            bar.GetChild(0).gameObject.SetActive(full);
+            bar.GetChild(1).gameObject.SetActive(half);
+            bar.GetChild(2).gameObject.SetActive(!full && !half);
+        }
+    }
+
 }

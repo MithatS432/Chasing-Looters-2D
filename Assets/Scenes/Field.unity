@@ -1392,8 +1392,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
+  currentHealth: 0
+  coinCount: 0
+  healthBars:
+  - {fileID: 1835777680}
+  - {fileID: 1686694096}
+  - {fileID: 978400569}
+  coinText: {fileID: 1479255326}
   playerSounds:
   - {fileID: 8300000, guid: f286c30c1f2b5804b9fa6bfa8424ee13, type: 3}
+  - {fileID: 8300000, guid: 4f30d246060ab5f459f7e00c30024be3, type: 3}
+  - {fileID: 8300000, guid: 40b962b227d2fa84aad5555d16ef1320, type: 3}
+  - {fileID: 8300000, guid: 37d8bf810030e314b9005110b0ba7fbe, type: 3}
   stepInterval: 0.28
 --- !u!82 &722418343
 AudioSource:
@@ -1467,7 +1477,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1482,7 +1492,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2005,7 +2015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 238.1, y: -20.1}
+  m_AnchoredPosition: {x: 238.09998, y: -20.099976}
   m_SizeDelta: {x: 99, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978400571
@@ -3105,7 +3115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 238.10004, y: -20.100006}
+  m_AnchoredPosition: {x: 238.10004, y: -20.099976}
   m_SizeDelta: {x: 99, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686694098
@@ -3334,7 +3344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 238.10004, y: -20.100006}
+  m_AnchoredPosition: {x: 238.10004, y: -20.099976}
   m_SizeDelta: {x: 99, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835777682
