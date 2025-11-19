@@ -27,6 +27,10 @@ public class Player : MonoBehaviour
     public bool isLessHealthWarningActive = false;
     public TextMeshProUGUI coinText;
 
+    public Button continueButton;
+    public Button quitGameButton;
+    public Button pauseButton;
+
     public Button restartButton;
     public Button exitButton;
     public GameObject deathPanel;
@@ -52,13 +56,27 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         UpdateHealthUI();
         restartButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
-        exitButton.onClick.AddListener(() => Application.Quit());
+        exitButton.onClick.AddListener(() =>
+        {
+            Application.Quit();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        });
+        continueButton.onClick.AddListener(() => Time.timeScale = 1f);
+        quitGameButton.onClick.AddListener(() =>
+        {
+            Application.Quit();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        });
+        pauseButton.onClick.AddListener(() => Time.timeScale = 0f);
     }
 
     void Update()
     {
         if (!isAlive) return;
-        GetDamage(1f);
         speed = Input.GetKey(KeyCode.LeftShift) ? 18f : 12f;
         HandleFootsteps();
 
@@ -128,6 +146,7 @@ public class Player : MonoBehaviour
     public void GetDamage(float damage)
     {
         currentHealth -= damage;
+        anim.SetTrigger("Hurt");
         UpdateHealthUI();
         if (currentHealth <= 0 && !isDead)
         {
