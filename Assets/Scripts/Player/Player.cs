@@ -15,14 +15,25 @@ public class Player : MonoBehaviour
     [Header("Player Settings")]
     [SerializeField] private float speed;
     private float attackIndex = 0f;
+    private float tumbleForce = 5500f;
 
     float maxHealth = 500f;
     public float currentHealth;
     public int coinCount = 0;
 
     [Header("Player UI Settings")]
-    public GameObject[] healthBars;
+    public Image healthBar;
+    public Image lessHealthWarning;
+    public bool isLessHealthWarningActive = false;
     public TextMeshProUGUI coinText;
+
+    public Button restartButton;
+    public Button exitButton;
+    public GameObject deathPanel;
+    public GameObject deathImageCredits;
+
+    public bool isDead = false;
+    public bool isAlive = true;
 
 
     [Header("Player Audio Settings")]
@@ -33,16 +44,20 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         prb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth;
         UpdateHealthUI();
+        restartButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
+        exitButton.onClick.AddListener(() => Application.Quit());
     }
 
     void Update()
     {
+        if (!isAlive) return;
         GetDamage(1f);
         speed = Input.GetKey(KeyCode.LeftShift) ? 18f : 12f;
         HandleFootsteps();
@@ -70,7 +85,11 @@ public class Player : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.C))
+        {
             anim.SetTrigger("Tumble");
+            float dirx = spriteRenderer.flipX ? -1f : 1f;
+            prb.AddForce(new Vector2(dirx, 0) * tumbleForce);
+        }
 
     }
     private void HandleFootsteps()
@@ -110,22 +129,46 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         UpdateHealthUI();
+        if (currentHealth <= 0 && !isDead)
+        {
+            isDead = true;
+            isAlive = false;
+            anim.SetTrigger("Death");
+            audioSource.PlayOneShot(playerSounds[4]);
+            Invoke("DeathScreen", 1.5f);
+        }
     }
     void UpdateHealthUI()
     {
         float healthFraction = currentHealth / maxHealth;
+        healthBar.fillAmount = healthFraction;
 
-        foreach (GameObject barObj in healthBars)
+        if (healthFraction > 0.5f)
         {
-            Transform bar = barObj.transform;
+            healthBar.color = new Color(0f, 1f, 0f);
+        }
+        else if (healthFraction > 0.2f)
+        {
+            healthBar.color = new Color(1f, 1f, 0f);
+        }
+        else
+        {
+            healthBar.color = new Color(1f, 0f, 0f);
+            if (!isLessHealthWarningActive)
+            {
+                audioSource.PlayOneShot(playerSounds[3]);
+                isLessHealthWarningActive = true;
+            }
+            lessHealthWarning.gameObject.SetActive(true);
 
-            bool full = healthFraction > 0.5f;
-            bool half = healthFraction > 0.2f && healthFraction <= 0.5f;
-
-            bar.GetChild(0).gameObject.SetActive(full);
-            bar.GetChild(1).gameObject.SetActive(half);
-            bar.GetChild(2).gameObject.SetActive(!full && !half);
         }
     }
-
+    void DeathScreen()
+    {
+        deathPanel.SetActive(true);
+        deathImageCredits.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        exitButton.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }
