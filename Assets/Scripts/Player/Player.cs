@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
     public AudioClip[] playerSounds;
     private float stepTimer = 0f;
     public float stepInterval = 0.35f;
+    public bool inWater = false;
 
 
     void Start()
@@ -128,6 +129,10 @@ public class Player : MonoBehaviour
         {
             stepTimer = 0f;
         }
+        if (inWater)
+        {
+            audioSource.PlayOneShot(playerSounds[5]);
+        }
     }
     private void FixedUpdate()
     {
@@ -189,5 +194,22 @@ public class Player : MonoBehaviour
         restartButton.gameObject.SetActive(true);
         exitButton.gameObject.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Water"))
+        {
+            inWater = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Water"))
+        {
+            inWater = false;
+        }
     }
 }

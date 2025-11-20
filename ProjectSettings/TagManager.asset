@@ -8,6 +8,10 @@ TagManager:
   - Ally
   - Main House
   - Fence
+  - Tree
+  - Shop
+  - House
+  - Water
   layers:
   - Default
   - TransparentFX
