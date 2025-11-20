@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     public float currentHealth;
     public int coinCount = 0;
 
+    public GameObject waterEffectPrefab;
+
     [Header("Player UI Settings")]
     public Image healthBar;
     public Image lessHealthWarning;
@@ -44,7 +46,10 @@ public class Player : MonoBehaviour
     public AudioClip[] playerSounds;
     private float stepTimer = 0f;
     public float stepInterval = 0.35f;
+
     public bool inWater = false;
+    private float waterTimer = 0f;
+    public float waterInterval = 0.5f;
 
 
     void Start()
@@ -115,7 +120,8 @@ public class Player : MonoBehaviour
     {
         bool isMoving = prb.linearVelocity.magnitude > 0.1f;
 
-        if (isMoving)
+        // Normal ayak sesleri
+        if (isMoving && !inWater)
         {
             stepTimer += Time.deltaTime;
 
@@ -129,11 +135,26 @@ public class Player : MonoBehaviour
         {
             stepTimer = 0f;
         }
-        if (inWater)
+
+        // Su ayak sesleri
+        if (isMoving && inWater)
         {
-            audioSource.PlayOneShot(playerSounds[5]);
+            waterTimer += Time.deltaTime;
+
+            if (waterTimer >= waterInterval)
+            {
+                audioSource.PlayOneShot(playerSounds[5]);
+                GameObject waterEffect = Instantiate(waterEffectPrefab, transform.position, Quaternion.identity);
+                Destroy(waterEffect, 1f);
+                waterTimer = 0f;
+            }
+        }
+        else
+        {
+            waterTimer = 0f;
         }
     }
+
     private void FixedUpdate()
     {
         float x = Input.GetAxis("Horizontal");
