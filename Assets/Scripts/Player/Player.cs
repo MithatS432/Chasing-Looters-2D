@@ -41,6 +41,11 @@ public class Player : MonoBehaviour
     public bool isDead = false;
     public bool isAlive = true;
 
+    public GameObject shopPanel;
+    public bool isShopping = false;
+    public bool isNearShop = false;
+
+
 
     [Header("Player Audio Settings")]
     public AudioClip[] playerSounds;
@@ -113,6 +118,13 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Tumble");
             float dirx = spriteRenderer.flipX ? -1f : 1f;
             prb.AddForce(new Vector2(dirx, 0) * tumbleForce);
+        }
+
+        if (isNearShop && Input.GetKeyDown(KeyCode.E))
+        {
+            isShopping = !isShopping;
+            shopPanel.SetActive(isShopping);
+            Time.timeScale = isShopping ? 0f : 1f;
         }
 
     }
@@ -225,12 +237,23 @@ public class Player : MonoBehaviour
         {
             inWater = true;
         }
+        if (other.CompareTag("Shop"))
+        {
+            isNearShop = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Water"))
         {
             inWater = false;
+        }
+        if (other.CompareTag("Shop"))
+        {
+            isNearShop = false;
+            isShopping = false;
+            shopPanel.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 }
