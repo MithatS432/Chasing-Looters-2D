@@ -12,6 +12,8 @@ TagManager:
   - Shop
   - House
   - Water
+  - Arrow
+  - Tower
   layers:
   - Default
   - TransparentFX
