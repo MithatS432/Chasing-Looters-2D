@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     float maxHealth = 500f;
     public float currentHealth;
-    public int coinCount = 0;
+    public int totalCoint = 0;
 
     public GameObject waterEffectPrefab;
 
@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth;
         UpdateHealthUI();
+        GatherCoin(totalCoint);
         restartButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
         exitButton.onClick.AddListener(() =>
         {
@@ -255,5 +256,12 @@ public class Player : MonoBehaviour
             shopPanel.SetActive(false);
             Time.timeScale = 1f;
         }
+    }
+
+    public int GatherCoin(int coinCount)
+    {
+        coinCount += totalCoint;
+        coinText.text = totalCoint.ToString();
+        return totalCoint;
     }
 }
