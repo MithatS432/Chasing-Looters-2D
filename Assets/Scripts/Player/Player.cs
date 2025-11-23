@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public int totalCoint = 0;
 
     public GameObject waterEffectPrefab;
+    public GameObject[] alliePrefabs;
+    public Transform allySpawnPoint;
 
     [Header("Player UI Settings")]
     public Image healthBar;
@@ -263,5 +265,37 @@ public class Player : MonoBehaviour
         coinCount += totalCoint;
         coinText.text = totalCoint.ToString();
         return totalCoint;
+    }
+
+
+    public void Soldier()
+    {
+        audioSource.PlayOneShot(playerSounds[6]);
+        Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+    }
+    public void Peasent()
+    {
+        audioSource.PlayOneShot(playerSounds[6]);
+        Instantiate(alliePrefabs[1], allySpawnPoint.position, Quaternion.identity);
+    }
+    public void Priest()
+    {
+        audioSource.PlayOneShot(playerSounds[6]);
+        Instantiate(alliePrefabs[2], allySpawnPoint.position, Quaternion.identity);
+    }
+    public void Knight()
+    {
+        audioSource.PlayOneShot(playerSounds[6]);
+        Instantiate(alliePrefabs[3], allySpawnPoint.position, Quaternion.identity);
+    }
+    public void Thief()
+    {
+        audioSource.PlayOneShot(playerSounds[6]);
+        Instantiate(alliePrefabs[4], allySpawnPoint.position, Quaternion.identity);
+    }
+    public void AllyBoss()
+    {
+        audioSource.PlayOneShot(playerSounds[6]);
+        Instantiate(alliePrefabs[5], allySpawnPoint.position, Quaternion.identity);
     }
 }
