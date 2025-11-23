@@ -999,10 +999,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Our purpose
 
-    We can buy towers or walls from merchant.
-
-    Clear
-    all enemies until the last wave
+    We can buy towers from merchant. Clear all enemies until
+    the last wave
 
 '
   m_isRightToLeft: 0

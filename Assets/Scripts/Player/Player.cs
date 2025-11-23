@@ -19,11 +19,19 @@ public class Player : MonoBehaviour
 
     float maxHealth = 500f;
     public float currentHealth;
+    bool isTakeDamage = false;
     public int totalCoint = 0;
 
     public GameObject waterEffectPrefab;
     public GameObject[] alliePrefabs;
     public Transform allySpawnPoint;
+    public GameObject[] towerPrefabs;
+    public Transform[] towerSpawnPoints;
+    private bool[] towerSlotsFilled;
+    private int nextSpawnIndex = 0;
+    private bool isFull = false;
+
+
 
     [Header("Player UI Settings")]
     public Image healthBar;
@@ -69,6 +77,7 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         UpdateHealthUI();
         GatherCoin(totalCoint);
+        towerSlotsFilled = new bool[towerSpawnPoints.Length];
         restartButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
         exitButton.onClick.AddListener(() =>
         {
@@ -114,6 +123,7 @@ public class Player : MonoBehaviour
         {
             audioSource.PlayOneShot(playerSounds[2]);
             anim.SetTrigger("Shield");
+            StartCoroutine(ShieldRoutine());
         }
 
         if (Input.GetKeyDown(KeyCode.C))
@@ -129,7 +139,12 @@ public class Player : MonoBehaviour
             shopPanel.SetActive(isShopping);
             Time.timeScale = isShopping ? 0f : 1f;
         }
-
+    }
+    private IEnumerator ShieldRoutine()
+    {
+        isTakeDamage = true;
+        yield return new WaitForSeconds(2f);
+        isTakeDamage = false;
     }
     private void HandleFootsteps()
     {
@@ -186,6 +201,7 @@ public class Player : MonoBehaviour
 
     public void GetDamage(float damage)
     {
+        if (isTakeDamage) return;
         currentHealth -= damage;
         anim.SetTrigger("Hurt");
         UpdateHealthUI();
@@ -270,32 +286,103 @@ public class Player : MonoBehaviour
 
     public void Soldier()
     {
-        audioSource.PlayOneShot(playerSounds[6]);
-        Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+        if (totalCoint >= 25)
+        {
+            totalCoint -= 25;
+            coinText.text = totalCoint.ToString();
+            audioSource.PlayOneShot(playerSounds[6]);
+            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+        }
     }
     public void Peasent()
     {
-        audioSource.PlayOneShot(playerSounds[6]);
-        Instantiate(alliePrefabs[1], allySpawnPoint.position, Quaternion.identity);
+        if (totalCoint >= 50)
+        {
+            totalCoint -= 50;
+            coinText.text = totalCoint.ToString();
+            audioSource.PlayOneShot(playerSounds[6]);
+            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+        }
     }
     public void Priest()
     {
-        audioSource.PlayOneShot(playerSounds[6]);
-        Instantiate(alliePrefabs[2], allySpawnPoint.position, Quaternion.identity);
+        if (totalCoint >= 40)
+        {
+            totalCoint -= 40;
+            coinText.text = totalCoint.ToString();
+            audioSource.PlayOneShot(playerSounds[6]);
+            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+        }
     }
     public void Knight()
     {
-        audioSource.PlayOneShot(playerSounds[6]);
-        Instantiate(alliePrefabs[3], allySpawnPoint.position, Quaternion.identity);
+        if (totalCoint >= 100)
+        {
+            totalCoint -= 100;
+            coinText.text = totalCoint.ToString();
+            audioSource.PlayOneShot(playerSounds[6]);
+            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+        }
     }
     public void Thief()
     {
-        audioSource.PlayOneShot(playerSounds[6]);
-        Instantiate(alliePrefabs[4], allySpawnPoint.position, Quaternion.identity);
+        if (totalCoint >= 60)
+        {
+            totalCoint -= 60;
+            coinText.text = totalCoint.ToString();
+            audioSource.PlayOneShot(playerSounds[6]);
+            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+        }
     }
     public void AllyBoss()
     {
+        if (totalCoint >= 500)
+        {
+            totalCoint -= 500;
+            coinText.text = totalCoint.ToString();
+            audioSource.PlayOneShot(playerSounds[6]);
+            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+        }
+    }
+
+    public void Tower1() => BuyTower(300, 0);
+    public void Tower2() => BuyTower(400, 1);
+    public void Tower3() => BuyTower(500, 2);
+    public void Tower4() => BuyTower(800, 3);
+    public void Tower5() => BuyTower(900, 4);
+    public void Tower6() => BuyTower(1000, 5);
+
+    public void BuyTower(int price, int towerIndex)
+    {
+        if (isFull)
+            return;
+
+        if (totalCoint < price)
+            return;
+
+        totalCoint -= price;
+        coinText.text = totalCoint.ToString();
         audioSource.PlayOneShot(playerSounds[6]);
-        Instantiate(alliePrefabs[5], allySpawnPoint.position, Quaternion.identity);
+
+        while (nextSpawnIndex < towerSpawnPoints.Length && towerSlotsFilled[nextSpawnIndex])
+            nextSpawnIndex++;
+
+        if (nextSpawnIndex >= towerSpawnPoints.Length)
+        {
+            isFull = true;
+            return;
+        }
+
+        Instantiate(
+            towerPrefabs[towerIndex],
+            towerSpawnPoints[nextSpawnIndex].position,
+            Quaternion.identity
+        );
+
+        towerSlotsFilled[nextSpawnIndex] = true;
+        nextSpawnIndex++;
+
+        if (nextSpawnIndex >= towerSpawnPoints.Length)
+            isFull = true;
     }
 }
