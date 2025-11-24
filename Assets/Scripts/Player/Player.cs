@@ -194,10 +194,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(x) + Mathf.Abs(y));
     }
 
-    public void TakeDamage(float damage)
-    {
 
-    }
 
     public void GetDamage(float damage)
     {
