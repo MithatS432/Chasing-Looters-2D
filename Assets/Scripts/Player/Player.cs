@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
+    public AttackColliderAnim attackCollider;
+
 
     [Header("Player Settings")]
     [SerializeField] private float speed;
@@ -75,8 +77,8 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth;
-        UpdateHealthUI();
         GatherCoin(totalCoint);
+        UpdateHealthUI();
         towerSlotsFilled = new bool[towerSpawnPoints.Length];
         restartButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
         exitButton.onClick.AddListener(() =>
@@ -111,6 +113,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            attackCollider.EnableForSeconds(0.3f);
             anim.SetFloat("attackIndex", attackIndex);
             anim.SetTrigger("Attack");
             audioSource.PlayOneShot(playerSounds[1]);
@@ -275,7 +278,7 @@ public class Player : MonoBehaviour
 
     public int GatherCoin(int coinCount)
     {
-        coinCount += totalCoint;
+        totalCoint += coinCount;
         coinText.text = totalCoint.ToString();
         return totalCoint;
     }
@@ -298,7 +301,7 @@ public class Player : MonoBehaviour
             totalCoint -= 50;
             coinText.text = totalCoint.ToString();
             audioSource.PlayOneShot(playerSounds[6]);
-            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+            Instantiate(alliePrefabs[1], allySpawnPoint.position, Quaternion.identity);
         }
     }
     public void Priest()
@@ -308,7 +311,7 @@ public class Player : MonoBehaviour
             totalCoint -= 40;
             coinText.text = totalCoint.ToString();
             audioSource.PlayOneShot(playerSounds[6]);
-            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+            Instantiate(alliePrefabs[2], allySpawnPoint.position, Quaternion.identity);
         }
     }
     public void Knight()
@@ -318,7 +321,7 @@ public class Player : MonoBehaviour
             totalCoint -= 100;
             coinText.text = totalCoint.ToString();
             audioSource.PlayOneShot(playerSounds[6]);
-            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+            Instantiate(alliePrefabs[3], allySpawnPoint.position, Quaternion.identity);
         }
     }
     public void Thief()
@@ -328,7 +331,7 @@ public class Player : MonoBehaviour
             totalCoint -= 60;
             coinText.text = totalCoint.ToString();
             audioSource.PlayOneShot(playerSounds[6]);
-            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+            Instantiate(alliePrefabs[4], allySpawnPoint.position, Quaternion.identity);
         }
     }
     public void AllyBoss()
@@ -338,7 +341,7 @@ public class Player : MonoBehaviour
             totalCoint -= 500;
             coinText.text = totalCoint.ToString();
             audioSource.PlayOneShot(playerSounds[6]);
-            Instantiate(alliePrefabs[0], allySpawnPoint.position, Quaternion.identity);
+            Instantiate(alliePrefabs[5], allySpawnPoint.position, Quaternion.identity);
         }
     }
 
