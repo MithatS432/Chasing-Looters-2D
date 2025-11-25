@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class Allies : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Rigidbody2D arb;
+    private Animator aa;
+    private SpriteRenderer[] allSprites;
+    private AudioSource deathSound;
+
+    public float health;
+    public float speed;
     void Start()
     {
-        
+        arb = GetComponent<Rigidbody2D>();
+        aa = GetComponent<Animator>();
+        deathSound = GetComponent<AudioSource>();
+        allSprites = GetComponentsInChildren<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

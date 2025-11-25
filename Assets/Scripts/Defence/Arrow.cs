@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float damage = 10f;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Enemy") && other.TryGetComponent<Enemies>(out var enemies))
+        {
+            enemies.GetDamage(damage);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

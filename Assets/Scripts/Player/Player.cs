@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     private bool[] towerSlotsFilled;
     private int nextSpawnIndex = 0;
     private bool isFull = false;
+    public Image superPowerImage;
+    public GameObject superPowerPrefab;
+    public bool isUseSuperPower = false;
 
 
 
@@ -190,6 +193,11 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!isAlive)
+        {
+            prb.linearVelocity = Vector2.zero; // Oyuncuyu durdur
+            return;
+        }
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         Vector2 move = new Vector2(x, y);
