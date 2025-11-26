@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: -2288008141886108278}
   - component: {fileID: 6778976833905544861}
   - component: {fileID: 8543279142083792706}
+  - component: {fileID: 5569379752054633533}
+  - component: {fileID: 1459036667744483883}
   - component: {fileID: 3216462000503162215}
-  - component: {fileID: 6862961883970490195}
   m_Layer: 0
   m_Name: Peasant
   m_TagString: Ally
@@ -139,6 +140,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   speed: 0
+  attackRange: 0
+--- !u!114 &5569379752054633533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010854855540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd097fdd3de48554ab906901cb5ecf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1459036667744483883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010854855540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d2e2973f4b27f4490e1d5c74b00a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &3216462000503162215
 AudioSource:
   m_ObjectHideFlags: 0
@@ -236,18 +262,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6862961883970490195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010854855540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d2e2973f4b27f4490e1d5c74b00a24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1000011210365404
 GameObject:
   m_ObjectHideFlags: 0

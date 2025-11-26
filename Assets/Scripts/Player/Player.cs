@@ -60,6 +60,9 @@ public class Player : MonoBehaviour
     public bool isShopping = false;
     public bool isNearShop = false;
 
+    [HideInInspector] public float allyBehaviorMode = 0f;
+    public TextMeshProUGUI allyModeText;
+
 
 
     [Header("Player Audio Settings")]
@@ -393,4 +396,25 @@ public class Player : MonoBehaviour
         if (nextSpawnIndex >= towerSpawnPoints.Length)
             isFull = true;
     }
+
+
+    public void SetAllyBehavior(float value)
+    {
+        allyBehaviorMode = value;
+
+        if (allyModeText != null)
+        {
+            if (value == 0)
+                allyModeText.text = "FOLLOW PLAYER";
+            else
+                allyModeText.text = "PROTECT VILLAGE";
+        }
+
+        Allies[] allAllies = FindObjectsByType<Allies>(FindObjectsSortMode.None);
+        foreach (Allies ally in allAllies)
+        {
+            ally.currentMode = allyBehaviorMode;
+        }
+    }
+
 }

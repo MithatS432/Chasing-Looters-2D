@@ -366,8 +366,9 @@ GameObject:
   - component: {fileID: -3778666616354789962}
   - component: {fileID: -4999027111128415139}
   - component: {fileID: 408832971826982113}
+  - component: {fileID: 1981134609889785997}
+  - component: {fileID: 1988193938649175234}
   - component: {fileID: 4641409677804533126}
-  - component: {fileID: 4526858006066865713}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Ally
@@ -492,6 +493,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   speed: 0
+  attackRange: 0
+--- !u!114 &1981134609889785997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013034572668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd097fdd3de48554ab906901cb5ecf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1988193938649175234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013034572668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97990592676be294c845807a130b71f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &4641409677804533126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -589,18 +615,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4526858006066865713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013034572668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97990592676be294c845807a130b71f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1000013226060160
 GameObject:
   m_ObjectHideFlags: 0
