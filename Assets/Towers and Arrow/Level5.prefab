@@ -147,3 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadd00e463eb2524a9a98259f663d77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerHealth: 600
+  detectionRadius: 60
+  fireRate: 3
+  arrowPrefab: {fileID: 6440317451349025938, guid: bbfd9e95ab9237c46b97a1b07e023a27, type: 3}
+  destroySound: {fileID: 8300000, guid: 567e34561fdd1e94bb0c509ee6d83359, type: 3}

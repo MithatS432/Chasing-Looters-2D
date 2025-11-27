@@ -17327,7 +17327,7 @@ MonoBehaviour:
   attackCollider: {fileID: 1232260601}
   speed: 12
   currentHealth: 0
-  totalCoint: 50
+  totalCoint: 0
   waterEffectPrefab: {fileID: 476501648382628788, guid: 088e0d3af35ec09449e5fa95f9689b14, type: 3}
   alliePrefabs:
   - {fileID: 1000011742669328, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
@@ -18387,18 +18387,6 @@ PrefabInstance:
     - target: {fileID: 4000013857073264, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218475244262913338, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218475244262913338, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: health
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218475244262913338, guid: 315058484cf2044ce8dcb608b4678ff6, type: 3}
-      propertyPath: attackRange
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23483,6 +23471,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca07afe6f0440d4fa294cbcc76c3e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  houseHealhtBar: {fileID: 1991555113}
+  houseHealth: 5000
+  deathPanel: {fileID: 34366599}
+  restart: {fileID: 359122178}
+  quit: {fileID: 2117000551}
 --- !u!1 &1027835720
 GameObject:
   m_ObjectHideFlags: 0
