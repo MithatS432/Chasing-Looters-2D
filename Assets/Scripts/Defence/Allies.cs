@@ -15,6 +15,15 @@ public class Allies : MonoBehaviour
     public float currentMode = 0f;
     private Transform player;
     private Transform mainHouse;
+    public float followDistance = 1.5f;
+    private bool isDead = false;
+    private bool enemyInRange = false;
+    public float attackCooldown = 1f;
+    private float attackTimer = 0f;
+
+    public float detectionRange = 15f;
+
+
 
     void Start()
     {
@@ -30,26 +39,133 @@ public class Allies : MonoBehaviour
 
     void Update()
     {
-        if (currentMode == 0)
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject closestEnemy = GetClosestEnemy(enemies);
+
+        if (closestEnemy != null)
         {
-            FollowTarget(player);
+            float distanceToEnemy = Vector2.Distance(transform.position, closestEnemy.transform.position);
+
+            if (distanceToEnemy <= detectionRange)
+            {
+                if (distanceToEnemy > followDistance)
+                {
+                    MoveTowards(closestEnemy.transform);
+                }
+                else
+                {
+                    arb.linearVelocity = Vector2.zero;
+                    enemyInRange = true;
+                }
+            }
+            else
+            {
+                enemyInRange = false;
+                MoveToDefaultTarget();
+            }
         }
         else
         {
-            FollowTarget(mainHouse);
+            enemyInRange = false;
+            MoveToDefaultTarget();
+        }
+
+        if (enemyInRange)
+        {
+            attackTimer -= Time.deltaTime;
+            if (attackTimer <= 0f)
+            {
+                aa.SetTrigger("Attack");
+                attackTimer = attackCooldown;
+            }
         }
     }
+
+
+    GameObject GetClosestEnemy(GameObject[] enemies)
+    {
+        GameObject closest = null;
+        float minDistance = Mathf.Infinity;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float dist = Vector2.Distance(transform.position, enemy.transform.position);
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                closest = enemy;
+            }
+        }
+        return closest;
+    }
+
+    void MoveTowards(Transform target)
+    {
+        Vector2 direction = (target.position - transform.position).normalized;
+        arb.linearVelocity = direction * speed;
+        aa.SetFloat("Speed", arb.linearVelocity.magnitude);
+
+        spriteRenderer.flipX = direction.x < 0;
+    }
+
+    void MoveToDefaultTarget()
+    {
+        if (currentMode == 0)
+            MoveTowards(player);
+        else
+            MoveTowards(mainHouse);
+    }
+
 
     void FollowTarget(Transform target)
     {
         if (target == null) return;
 
+        float distance = Vector2.Distance(transform.position, target.position);
+
+        if (distance <= followDistance)
+        {
+            arb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         Vector2 direction = (target.position - transform.position).normalized;
         arb.linearVelocity = direction * speed;
-
+        aa.SetFloat("Speed", arb.linearVelocity.magnitude);
         if (direction.x > 0)
             spriteRenderer.flipX = false;
         else if (direction.x < 0)
             spriteRenderer.flipX = true;
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+            enemyInRange = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+            enemyInRange = false;
+    }
+    public void GetDamage(float dmg)
+    {
+        if (isDead)
+            return;
+
+        health -= dmg;
+
+        if (health > 0)
+        {
+            aa.SetTrigger("Hurt");
+            return;
+        }
+
+        isDead = true;
+        aa.ResetTrigger("Hurt");
+        aa.SetTrigger("Die");
+
+        Destroy(gameObject, 0.5f);
+    }
+
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013355145484}
   - component: {fileID: 212000013830552104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013762679274}
   - component: {fileID: 212000013081248592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012334687584}
   - component: {fileID: 212000011507247488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012598321814}
   - component: {fileID: 212000012964016896}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 1988193938649175234}
   - component: {fileID: 4641409677804533126}
   - component: {fileID: 872387744464842650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Priest
   m_TagString: Ally
   m_Icon: {fileID: 0}
@@ -496,6 +496,8 @@ MonoBehaviour:
   speed: 0
   attackRange: 0
   currentMode: 0
+  followDistance: 8
+  attackCooldown: 1
 --- !u!114 &1981134609889785997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,7 +662,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -682,7 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012801261880}
   - component: {fileID: 212000012399654422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013680829624}
   - component: {fileID: 212000011800001642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011105442798}
   - component: {fileID: 212000011847688208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +947,7 @@ GameObject:
   - component: {fileID: 1580539210802922052}
   - component: {fileID: 3355185398545453721}
   - component: {fileID: 3728918399082575879}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackAlly (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013415426654}
   - component: {fileID: 212000012017310748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010699540364}
   - component: {fileID: 212000012818382520}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 6865953410958841518}
   - component: {fileID: 6362077172148604463}
   - component: {fileID: 6860930369915073157}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Soldier
   m_TagString: Ally
   m_Icon: {fileID: 0}
@@ -316,6 +316,8 @@ MonoBehaviour:
   speed: 8
   attackRange: 5
   currentMode: 0
+  followDistance: 8
+  attackCooldown: 1.5
 --- !u!114 &6865953410958841518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,7 +470,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -490,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011635417628}
   - component: {fileID: 212000012228959506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011435472148}
   - component: {fileID: 212000013542079236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012747005852}
   - component: {fileID: 212000010206430610}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010002636958}
   - component: {fileID: 212000010385311698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011425412340}
   - component: {fileID: 212000013500962334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +934,7 @@ GameObject:
   - component: {fileID: 3274241702893787113}
   - component: {fileID: 4630715275720769762}
   - component: {fileID: 3428452945332860531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackAlly
   m_TagString: Untagged
   m_Icon: {fileID: 0}

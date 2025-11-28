@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1459036667744483883}
   - component: {fileID: 3216462000503162215}
   - component: {fileID: 8342778222129112900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Peasant
   m_TagString: Ally
   m_Icon: {fileID: 0}
@@ -143,6 +143,7 @@ MonoBehaviour:
   speed: 0
   attackRange: 0
   currentMode: 0
+  followDistance: 8
 --- !u!114 &5569379752054633533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013509728182}
   - component: {fileID: 212000013063219618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012222275596}
   - component: {fileID: 212000013236170232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011597461332}
   - component: {fileID: 212000013552290778}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010616645484}
   - component: {fileID: 212000013402081082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012882303986}
   - component: {fileID: 212000012153660448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012858508312}
   - component: {fileID: 212000013144291688}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010962383484}
   - component: {fileID: 212000010422911958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010281675896}
   - component: {fileID: 212000012516139366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1034,7 @@ GameObject:
   - component: {fileID: 7089884613616538695}
   - component: {fileID: 2406379395794456881}
   - component: {fileID: 5920138133848122649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackAlly (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

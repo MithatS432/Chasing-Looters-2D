@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1408867530981679572}
   - component: {fileID: 2966482156078844517}
   - component: {fileID: 4911277960739076425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackAlly (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1732497122238393319}
   - component: {fileID: 7158419180259185717}
   - component: {fileID: 2540588064410947537}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hero Ally Boss
   m_TagString: Ally
   m_Icon: {fileID: 0}
@@ -285,6 +285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   speed: 0
+  attackRange: 0
+  currentMode: 0
+  followDistance: 8
 --- !u!114 &7158419180259185717
 MonoBehaviour:
   m_ObjectHideFlags: 0
