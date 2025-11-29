@@ -101,12 +101,25 @@ public class Allies : MonoBehaviour
 
     void MoveTowards(Transform target)
     {
+        float distance = Vector2.Distance(transform.position, target.position);
+
+        if (distance <= followDistance)
+        {
+            arb.linearVelocity = Vector2.zero;
+            aa.SetFloat("Speed", 0);
+            return;
+        }
+
         Vector2 direction = (target.position - transform.position).normalized;
         arb.linearVelocity = direction * speed;
         aa.SetFloat("Speed", arb.linearVelocity.magnitude);
 
-        spriteRenderer.flipX = direction.x < 0;
+        bool flip = direction.x < 0;
+        foreach (var sr in allSprites)
+            sr.flipX = flip;
     }
+
+
 
     void MoveToDefaultTarget()
     {

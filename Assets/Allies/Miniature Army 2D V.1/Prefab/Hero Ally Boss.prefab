@@ -283,11 +283,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc01ee84a703df4c986d86363ed053e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  speed: 0
-  attackRange: 0
+  health: 150
+  speed: 15
+  attackRange: 9
   currentMode: 0
-  followDistance: 8
+  followDistance: 15
+  attackCooldown: 2
+  detectionRange: 30
 --- !u!114 &7158419180259185717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +313,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: df018f548905b594b919c01f8c9ffe27, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
