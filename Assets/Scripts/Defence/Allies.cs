@@ -23,6 +23,8 @@ public class Allies : MonoBehaviour
 
     public float detectionRange = 15f;
 
+    public AllyAttack allyAttack;
+
 
 
     void Start()
@@ -76,6 +78,7 @@ public class Allies : MonoBehaviour
             if (attackTimer <= 0f)
             {
                 aa.SetTrigger("Attack");
+                allyAttack.EnableForSeconds(0.3f);
                 attackTimer = attackCooldown;
             }
         }
@@ -114,10 +117,14 @@ public class Allies : MonoBehaviour
         arb.linearVelocity = direction * speed;
         aa.SetFloat("Speed", arb.linearVelocity.magnitude);
 
-        bool flip = direction.x < 0;
-        foreach (var sr in allSprites)
-            sr.flipX = flip;
+        if (player != null)
+        {
+            bool flip = player.position.x < transform.position.x;
+            foreach (var sr in allSprites)
+                sr.flipX = flip;
+        }
     }
+
 
 
 
@@ -145,11 +152,11 @@ public class Allies : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
         arb.linearVelocity = direction * speed;
         aa.SetFloat("Speed", arb.linearVelocity.magnitude);
-        if (direction.x > 0)
-            spriteRenderer.flipX = false;
-        else if (direction.x < 0)
-            spriteRenderer.flipX = true;
+
+        if (player != null)
+            spriteRenderer.flipX = player.position.x < transform.position.x;
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
@@ -177,6 +184,8 @@ public class Allies : MonoBehaviour
         isDead = true;
         aa.ResetTrigger("Hurt");
         aa.SetTrigger("Die");
+        if (deathSound != null)
+            deathSound.Play();
 
         Destroy(gameObject, 0.5f);
     }

@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd097fdd3de48554ab906901cb5ecf77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCollider: {fileID: 2966482156078844517}
+  damage: 15
 --- !u!1 &2987388843696474675
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +107,6 @@ GameObject:
   - component: {fileID: 1438539400345841767}
   - component: {fileID: 7790803718101909840}
   - component: {fileID: 1732497122238393319}
-  - component: {fileID: 7158419180259185717}
   - component: {fileID: 2540588064410947537}
   m_Layer: 6
   m_Name: Hero Ally Boss
@@ -290,18 +291,7 @@ MonoBehaviour:
   followDistance: 15
   attackCooldown: 2
   detectionRange: 30
---- !u!114 &7158419180259185717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2987388843696474675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd097fdd3de48554ab906901cb5ecf77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  allyAttack: {fileID: 4911277960739076425}
 --- !u!82 &2540588064410947537
 AudioSource:
   m_ObjectHideFlags: 0

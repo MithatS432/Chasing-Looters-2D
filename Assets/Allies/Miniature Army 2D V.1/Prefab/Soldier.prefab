@@ -187,7 +187,6 @@ GameObject:
   - component: {fileID: -8088481438971361635}
   - component: {fileID: -1383520163305643287}
   - component: {fileID: 1218475244262913338}
-  - component: {fileID: 6865953410958841518}
   - component: {fileID: 6362077172148604463}
   m_Layer: 6
   m_Name: Soldier
@@ -318,18 +317,7 @@ MonoBehaviour:
   followDistance: 12
   attackCooldown: 1.5
   detectionRange: 20
---- !u!114 &6865953410958841518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011742669328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd097fdd3de48554ab906901cb5ecf77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  allyAttack: {fileID: 3428452945332860531}
 --- !u!82 &6362077172148604463
 AudioSource:
   m_ObjectHideFlags: 0
@@ -959,3 +947,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd097fdd3de48554ab906901cb5ecf77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCollider: {fileID: 4630715275720769762}
+  damage: 15

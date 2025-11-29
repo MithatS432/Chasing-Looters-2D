@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -8455305645493703593}
   - component: {fileID: 4580631421035051413}
   - component: {fileID: 3958102703201263928}
-  - component: {fileID: 3403241560600406141}
   - component: {fileID: 8718270292127526981}
   m_Layer: 6
   m_Name: Knight
@@ -144,18 +143,7 @@ MonoBehaviour:
   followDistance: 12
   attackCooldown: 1.5
   detectionRange: 25
---- !u!114 &3403241560600406141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010755293042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd097fdd3de48554ab906901cb5ecf77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  allyAttack: {fileID: 5152851457000833528}
 --- !u!82 &8718270292127526981
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1047,3 +1035,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd097fdd3de48554ab906901cb5ecf77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCollider: {fileID: 7926800703730943922}
+  damage: 15
