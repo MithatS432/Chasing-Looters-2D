@@ -198,7 +198,7 @@ public class Player : MonoBehaviour
     {
         if (!isAlive)
         {
-            prb.linearVelocity = Vector2.zero; // Oyuncuyu durdur
+            prb.linearVelocity = Vector2.zero;
             return;
         }
         float x = Input.GetAxis("Horizontal");
@@ -293,6 +293,12 @@ public class Player : MonoBehaviour
         coinText.text = totalCoint.ToString();
         return totalCoint;
     }
+    public void UpdateCoinUI()
+    {
+        if (coinText != null)
+            coinText.text = totalCoint.ToString();
+    }
+
 
 
     public void Soldier()
