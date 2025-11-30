@@ -9,6 +9,7 @@ public class ForPeasent : MonoBehaviour
     private SpriteRenderer[] spriteRenderers;
 
     public float health = 50f;
+    public float maxHealth;
     public GameObject arrowPrefab;
     public Transform firePoint;
     public float attackCooldown = 1.5f;
@@ -32,6 +33,7 @@ public class ForPeasent : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         mainHouse = GameObject.FindGameObjectWithTag("Main House").transform;
+        health = maxHealth;
     }
 
     void Update()

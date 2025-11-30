@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private float attackIndex = 0f;
     private float tumbleForce = 5500f;
 
-    float maxHealth = 500f;
+    public float maxHealth = 500f;
     public float currentHealth;
     bool isTakeDamage = false;
     public int totalCoint = 0;
@@ -225,7 +225,7 @@ public class Player : MonoBehaviour
             Invoke("DeathScreen", 1.5f);
         }
     }
-    void UpdateHealthUI()
+    public void UpdateHealthUI()
     {
         float healthFraction = currentHealth / maxHealth;
         healthBar.fillAmount = healthFraction;

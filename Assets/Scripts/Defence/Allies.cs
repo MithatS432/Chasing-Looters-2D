@@ -9,6 +9,8 @@ public class Allies : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     public float health;
+    public float maxHealth;
+
     public float speed;
     public float attackRange;
 
@@ -37,6 +39,8 @@ public class Allies : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         mainHouse = GameObject.FindGameObjectWithTag("Main House").transform;
+        health = maxHealth;
+
     }
 
     void Update()

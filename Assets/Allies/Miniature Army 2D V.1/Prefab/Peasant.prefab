@@ -136,12 +136,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d2e2973f4b27f4490e1d5c74b00a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 30
+  maxHealth: 30
   arrowPrefab: {fileID: 6440317451349025938, guid: bbfd9e95ab9237c46b97a1b07e023a27, type: 3}
   firePoint: {fileID: 5404278723978529082}
   attackCooldown: 2
   detectionRange: 40
-  attackRange: 10
+  attackRange: 40
   speed: 9
   followDistance: 12
 --- !u!82 &3216462000503162215

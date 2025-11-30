@@ -17334,6 +17334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCollider: {fileID: 1232260601}
   speed: 12
+  maxHealth: 500
   currentHealth: 0
   totalCoint: 0
   waterEffectPrefab: {fileID: 476501648382628788, guid: 088e0d3af35ec09449e5fa95f9689b14, type: 3}
