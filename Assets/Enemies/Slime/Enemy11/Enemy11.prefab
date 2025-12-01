@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 309214188202620040}
   - component: {fileID: 7440899565597016150}
   - component: {fileID: 7546683017870473747}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy11
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c77c01099dd12fe4e96e1abb0b9ac159, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -300,7 +300,13 @@ MonoBehaviour:
   health: 40
   speed: 3
   attackRange: 9
+  allyAttackRange: 3.75
+  towerAttackRange: 11.8
+  houseAttackRange: 50
+  detectionRange: 12.61
   attackCooldown: 0.5
+  coinReward: 5
+  bloodEffectPrefab: {fileID: 4989290367204250762, guid: 888c9d920f1dc624a824f14de9446b41, type: 3}
 --- !u!1 &8719429984413897395
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +318,7 @@ GameObject:
   - component: {fileID: 6394749415400966108}
   - component: {fileID: 1185514650089645884}
   - component: {fileID: 2826971797282994819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +387,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 3.29, y: -3.03}
+  m_Offset: {x: 3.088635, y: -3.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -391,5 +397,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.90273, y: 1.5}
   m_EdgeRadius: 0

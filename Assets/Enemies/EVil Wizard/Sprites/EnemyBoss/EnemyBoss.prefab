@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7877930794937386455}
   - component: {fileID: 4681993890536852132}
   - component: {fileID: 2210866008843524869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.055642717, y: -0.014839023}
+  m_Offset: {x: 0.06340414, y: -0.0031968951}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -186,7 +186,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.32896298, y: 0.5010827}
+  m_Size: {x: 0.5850891, y: 0.524367}
   m_EdgeRadius: 0
 --- !u!82 &4681993890536852132
 AudioSource:
@@ -199,8 +199,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 8300000, guid: 1c540acb123e3eb478d5286f810c171b, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1.19
   Loop: 0
@@ -297,6 +297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76ad129786328d47986dfd21068b106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 300
+  speed: 3
+  attackCooldown: 1.5
+  bloodEffectPrefab: {fileID: 4989290367204250762, guid: 888c9d920f1dc624a824f14de9446b41, type: 3}
+  attackRange: 15
 --- !u!1 &8764795549791303609
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,9 +311,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5471255056801150893}
-  - component: {fileID: 1658667790082418999}
   - component: {fileID: 656689785634604336}
-  m_Layer: 0
+  - component: {fileID: 6310036896776845617}
+  m_Layer: 7
   m_Name: Attack (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,19 +335,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4814235269159735174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1658667790082418999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8764795549791303609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ee5af94fe22e8c4db4b01cac6b13bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackCollider: {fileID: 656689785634604336}
 --- !u!61 &656689785634604336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -389,3 +381,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.6265855, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &6310036896776845617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8764795549791303609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b691c58cfccf34fa40c48b71070062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCollider: {fileID: 656689785634604336}
+  damageInterval: 0.5

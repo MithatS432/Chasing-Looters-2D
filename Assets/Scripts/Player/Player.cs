@@ -83,8 +83,8 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth;
-        GatherCoin(totalCoint);
         UpdateHealthUI();
+        GatherCoin(totalCoint);
         towerSlotsFilled = new bool[towerSpawnPoints.Length];
         restartButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
         exitButton.onClick.AddListener(() =>
@@ -232,24 +232,28 @@ public class Player : MonoBehaviour
 
         if (healthFraction > 0.5f)
         {
-            healthBar.color = new Color(0f, 1f, 0f);
+            healthBar.color = Color.green;
+            lessHealthWarning.gameObject.SetActive(false); 
+            isLessHealthWarningActive = false;
         }
         else if (healthFraction > 0.2f)
         {
-            healthBar.color = new Color(1f, 1f, 0f);
+            healthBar.color = Color.yellow;
+            lessHealthWarning.gameObject.SetActive(false);
+            isLessHealthWarningActive = false;
         }
         else
         {
-            healthBar.color = new Color(1f, 0f, 0f);
+            healthBar.color = Color.red;
             if (!isLessHealthWarningActive)
             {
                 audioSource.PlayOneShot(playerSounds[3]);
                 isLessHealthWarningActive = true;
             }
             lessHealthWarning.gameObject.SetActive(true);
-
         }
     }
+
     void DeathScreen()
     {
         deathPanel.SetActive(true);
@@ -287,19 +291,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    public int GatherCoin(int coinCount)
+    public void GatherCoin(int coinCount)
     {
         totalCoint += coinCount;
-        coinText.text = totalCoint.ToString();
-        return totalCoint;
+        coinText.SetText(totalCoint.ToString());
     }
-    public void UpdateCoinUI()
-    {
-        if (coinText != null)
-            coinText.text = totalCoint.ToString();
-    }
-
-
 
     public void Soldier()
     {

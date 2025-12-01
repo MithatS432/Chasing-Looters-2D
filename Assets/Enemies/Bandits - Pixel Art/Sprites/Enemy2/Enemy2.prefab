@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4004193172332719555}
   - component: {fileID: 2246784671221068288}
   - component: {fileID: 2253819259024775986}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4217021720761238972}
   - component: {fileID: 5815695184116362221}
   - component: {fileID: 1716522320589423063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c77c01099dd12fe4e96e1abb0b9ac159, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -391,5 +391,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   speed: 9
-  attackRange: 8
+  attackRange: 10.35
+  allyAttackRange: 2.87
+  towerAttackRange: 11.18
+  houseAttackRange: 50
+  detectionRange: 14.71
   attackCooldown: 1
+  coinReward: 15
+  bloodEffectPrefab: {fileID: 4989290367204250762, guid: 888c9d920f1dc624a824f14de9446b41, type: 3}

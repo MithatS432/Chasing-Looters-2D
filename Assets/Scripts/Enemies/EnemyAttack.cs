@@ -34,5 +34,16 @@ public class EnemyAttack : MonoBehaviour
         {
             player.GetDamage(damage);
         }
+
+        MainHous mainHous = other.GetComponent<MainHous>();
+        if (mainHous != null)
+        {
+            mainHous.GetDamage(damage);
+        }
+        Tower tower = other.GetComponent<Tower>();
+        if (tower != null)
+        {
+            tower.GetDamage(damage);
+        }
     }
 }

@@ -28,5 +28,10 @@ public class AllyAttack : MonoBehaviour
         {
             enemy.GetDamage(damage);
         }
+        ForEnemyBoss boss = other.GetComponent<ForEnemyBoss>();
+        if (boss != null)
+        {
+            boss.GetDamage(damage);
+        }
     }
 }

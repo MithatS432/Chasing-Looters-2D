@@ -21,11 +21,6 @@ public class Tower : MonoBehaviour
             FireArrow(target.transform);
             fireTimer = 0f;
         }
-        if (towerHealth <= 0)
-        {
-            Destroy(gameObject);
-            AudioSource.PlayClipAtPoint(destroySound, transform.position);
-        }
     }
 
     Collider2D FindClosestEnemy()
@@ -55,5 +50,14 @@ public class Tower : MonoBehaviour
     {
         GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
         arrow.GetComponent<Arrow>().Initialize(target);
+    }
+    public void GetDamage(float damage)
+    {
+        towerHealth -= damage;
+        if (towerHealth <= 0)
+        {
+            Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(destroySound, transform.position);
+        }
     }
 }

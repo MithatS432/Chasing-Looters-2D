@@ -31,8 +31,7 @@ public class ForThief : MonoBehaviour
         {
             if (player.totalCoint >= stealCoinCount)
             {
-                player.totalCoint -= stealCoinCount;
-                player.UpdateCoinUI();
+                player.GatherCoin(-stealCoinCount);
                 AudioSource.PlayClipAtPoint(stealSound, transform.position);
                 Debug.Log($"Hırsız {stealCoinCount} altın çaldı. Kalan: {player.totalCoint}");
             }

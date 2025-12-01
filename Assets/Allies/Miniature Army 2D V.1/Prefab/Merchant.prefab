@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 6032509973275661706}
   m_Layer: 0
   m_Name: Merchant
-  m_TagString: Ally
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -524,7 +524,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!70 &6032509973275661706
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

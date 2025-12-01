@@ -402,7 +402,7 @@ MonoBehaviour:
   - {fileID: 1000010854855540, guid: a3c1faf915dc240bca8ed7566d46910c, type: 3}
   - {fileID: 1000013034572668, guid: 389c7e1a1dabb4e1e917001420b89c9a, type: 3}
   - {fileID: 1000010755293042, guid: 978fa2fb617654f5eaeff9da6fc7d116, type: 3}
-  - {fileID: 1000012663239756, guid: 13c470c5b8dcd4854834911f7e0a9a6c, type: 3}
+  - {fileID: 8009649596463616804, guid: e840170867d3a7b44b178d79a25aef5f, type: 3}
   - {fileID: 2987388843696474675, guid: 15009fa3b7becbe48bbf3eea821b84e0, type: 3}
   allySpawnPoint: {fileID: 0}
   towerPrefabs:

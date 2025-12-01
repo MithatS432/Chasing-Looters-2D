@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7967669894844865518}
   - component: {fileID: 3697338488245849912}
   - component: {fileID: 9106552049332506334}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy9
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c77c01099dd12fe4e96e1abb0b9ac159, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -300,7 +300,13 @@ MonoBehaviour:
   health: 45
   speed: 8
   attackRange: 9
+  allyAttackRange: 8.47
+  towerAttackRange: 10.3
+  houseAttackRange: 50
+  detectionRange: 13.5
   attackCooldown: 1.5
+  coinReward: 12
+  bloodEffectPrefab: {fileID: 4989290367204250762, guid: 888c9d920f1dc624a824f14de9446b41, type: 3}
 --- !u!1 &8425376443675505702
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +318,7 @@ GameObject:
   - component: {fileID: 8862320634814030615}
   - component: {fileID: 4058324143947664038}
   - component: {fileID: 559829412978134742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

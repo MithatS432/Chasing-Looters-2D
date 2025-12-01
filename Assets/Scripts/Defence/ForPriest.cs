@@ -47,6 +47,7 @@ public class ForPriest : MonoBehaviour
                 {
                     anim.SetTrigger("Attack");
                     Heal(player);
+                    playerScript.UpdateHealthUI();
                     healTimer = healCooldown;
                 }
             }
