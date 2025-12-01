@@ -7,6 +7,7 @@ public class ForThief : MonoBehaviour
 
     private float stealTime;
     private float timer = 0f;
+    public AudioClip stealSound;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class ForThief : MonoBehaviour
             {
                 player.totalCoint -= stealCoinCount;
                 player.UpdateCoinUI();
+                AudioSource.PlayClipAtPoint(stealSound, transform.position);
                 Debug.Log($"Hırsız {stealCoinCount} altın çaldı. Kalan: {player.totalCoint}");
             }
             else

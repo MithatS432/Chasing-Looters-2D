@@ -957,6 +957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stealCoinCount: 10
   player: {fileID: 981921971908545544, guid: 398c6cdb4867aa143beba5c754d37822, type: 3}
+  stealSound: {fileID: 8300000, guid: 89085d8fd7336ed4b8acd61d80b498c8, type: 3}
 --- !u!82 &5210293999009334447
 AudioSource:
   m_ObjectHideFlags: 0

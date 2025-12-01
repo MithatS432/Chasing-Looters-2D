@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7967669894844865518}
   - component: {fileID: 3697338488245849912}
   - component: {fileID: 9106552049332506334}
-  - component: {fileID: 7642049030275636130}
   m_Layer: 0
   m_Name: Enemy9
   m_TagString: Enemy
@@ -298,19 +297,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52558b7f9ec459459c25b8bc551ae95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
---- !u!114 &7642049030275636130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8332190521826058344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ee5af94fe22e8c4db4b01cac6b13bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  health: 45
+  speed: 8
+  attackRange: 9
+  attackCooldown: 1.5
 --- !u!1 &8425376443675505702
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee5af94fe22e8c4db4b01cac6b13bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCollider: {fileID: 559829412978134742}
 --- !u!61 &559829412978134742
 BoxCollider2D:
   m_ObjectHideFlags: 0

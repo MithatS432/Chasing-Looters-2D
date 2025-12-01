@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 89121191605258649}
   - component: {fileID: 7877930794937386455}
   - component: {fileID: 4681993890536852132}
-  - component: {fileID: 5774775577342987300}
-  - component: {fileID: 7083677907495974159}
+  - component: {fileID: 2210866008843524869}
   m_Layer: 0
   m_Name: EnemyBoss
   m_TagString: Enemy
@@ -286,7 +285,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5774775577342987300
+--- !u!114 &2210866008843524869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,20 +294,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 824231990695530773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52558b7f9ec459459c25b8bc551ae95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
---- !u!114 &7083677907495974159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824231990695530773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ee5af94fe22e8c4db4b01cac6b13bb9, type: 3}
+  m_Script: {fileID: 11500000, guid: b76ad129786328d47986dfd21068b106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8764795549791303609
@@ -356,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee5af94fe22e8c4db4b01cac6b13bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCollider: {fileID: 656689785634604336}
 --- !u!61 &656689785634604336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -390,7 +377,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 4.2, y: 0.6}
+  m_Offset: {x: 4.5132904, y: 0.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -400,5 +387,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 1.5}
+  m_Size: {x: 2.6265855, y: 1.5}
   m_EdgeRadius: 0
