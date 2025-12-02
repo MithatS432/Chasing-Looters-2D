@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 1e0d8771531fb2c458873ff016ba936d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5233050765564727423
+    second: LookAround_0
+  - first:
+      213: 7850402729238936559
+    second: LookAround_1
+  - first:
+      213: 7443401842244697821
+    second: LookAround_2
+  - first:
+      213: 2601313086932250490
+    second: LookAround_3
+  - first:
+      213: -7148889687412375876
+    second: LookAround_4
+  - first:
+      213: -3840760265713642389
+    second: LookAround_5
+  - first:
+      213: -8966718922406351525
+    second: LookAround_6
+  - first:
+      213: -8167689472451073188
+    second: LookAround_7
+  - first:
+      213: 4384051456840203623
+    second: LookAround_8
+  - first:
+      213: 4771353446918086373
+    second: LookAround_9
+  - first:
+      213: -4850440595224373360
+    second: LookAround_10
+  - first:
+      213: 5874134921302810817
+    second: LookAround_11
+  - first:
+      213: 830803534268900748
+    second: LookAround_12
+  - first:
+      213: 2891908755670646257
+    second: LookAround_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LookAround_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 848
+        width: 132
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70521502f78f9840800000000000000
+      internalID: 5233050765564727423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 848
+        width: 136
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb3b0460bb32fc60800000000000000
+      internalID: 7850402729238936559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_2
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 855
+        width: 115
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddebb77e9864c4760800000000000000
+      internalID: 7443401842244697821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_3
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 855
+        width: 108
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7feb206878b91420800000000000000
+      internalID: 2601313086932250490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 599
+        width: 112
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbef45ba4ba0acc90800000000000000
+      internalID: -7148889687412375876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 599
+        width: 121
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6414b633e0e2bac0800000000000000
+      internalID: -3840760265713642389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_6
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 599
+        width: 125
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d2235d5a0df8380800000000000000
+      internalID: -8966718922406351525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_7
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 599
+        width: 126
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b2bd6f2b986ae80800000000000000
+      internalID: -8167689472451073188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 343
+        width: 116
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d7ef1829747dc30800000000000000
+      internalID: 4384051456840203623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_9
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 343
+        width: 108
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee53652ea0473240800000000000000
+      internalID: 4771353446918086373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_10
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 344
+        width: 109
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09754853af5cfacb0800000000000000
+      internalID: -4850440595224373360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_11
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 337
+        width: 110
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0a8f2a69e158150800000000000000
+      internalID: 5874134921302810817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 80
+        width: 116
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85ac32a96b978b00800000000000000
+      internalID: 830803534268900748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LookAround_13
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 80
+        width: 130
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd3798f0bf122820800000000000000
+      internalID: 2891908755670646257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LookAround_0: 5233050765564727423
+      LookAround_1: 7850402729238936559
+      LookAround_10: -4850440595224373360
+      LookAround_11: 5874134921302810817
+      LookAround_12: 830803534268900748
+      LookAround_13: 2891908755670646257
+      LookAround_2: 7443401842244697821
+      LookAround_3: 2601313086932250490
+      LookAround_4: -7148889687412375876
+      LookAround_5: -3840760265713642389
+      LookAround_6: -8966718922406351525
+      LookAround_7: -8167689472451073188
+      LookAround_8: 4384051456840203623
+      LookAround_9: 4771353446918086373
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

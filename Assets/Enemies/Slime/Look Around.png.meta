@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 839a5f4376feef744b52b25b056f7d98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4391515023638932231
+    second: Look Around_0
+  - first:
+      213: 545779802686865394
+    second: Look Around_1
+  - first:
+      213: 7775652670262735841
+    second: Look Around_2
+  - first:
+      213: 3586496521023898654
+    second: Look Around_3
+  - first:
+      213: -4570989680014714100
+    second: Look Around_4
+  - first:
+      213: -8513441197437952150
+    second: Look Around_5
+  - first:
+      213: 5838320995256096465
+    second: Look Around_6
+  - first:
+      213: -6945761661868973651
+    second: Look Around_7
+  - first:
+      213: 4281917471461367825
+    second: Look Around_8
+  - first:
+      213: -4082710110246815478
+    second: Look Around_9
+  - first:
+      213: -7280001460603927399
+    second: Look Around_10
+  - first:
+      213: 8764207063285531418
+    second: Look Around_11
+  - first:
+      213: 3115121014320017451
+    second: Look Around_12
+  - first:
+      213: -8787772204357546062
+    second: Look Around_13
+  - first:
+      213: 9143426925299629287
+    second: Look Around_14
+  - first:
+      213: 7298408049275989276
+    second: Look Around_15
+  - first:
+      213: -5422491699605727684
+    second: Look Around_16
+  - first:
+      213: 5068415584247846735
+    second: Look Around_17
+  - first:
+      213: -379504818925193253
+    second: Look Around_18
+  - first:
+      213: 8902950701407637938
+    second: Look Around_19
+  - first:
+      213: 3051015928985484571
+    second: Look Around_20
+  - first:
+      213: 196100195444575135
+    second: Look Around_21
+  - first:
+      213: 4940155655825638175
+    second: Look Around_22
+  - first:
+      213: -8179011296378107445
+    second: Look Around_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Look Around_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1097
+        width: 89
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b2ac195abc1fc30800000000000000
+      internalID: 4391515023638932231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1097
+        width: 90
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffbbb0c6dff29700800000000000000
+      internalID: 545779802686865394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_2
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1097
+        width: 90
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3f3db08eaa8eb60800000000000000
+      internalID: 7775652670262735841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_3
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1097
+        width: 92
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14cdc3759bc5c130800000000000000
+      internalID: 3586496521023898654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_4
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 1097
+        width: 92
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b1fbaaa159090c0800000000000000
+      internalID: -4570989680014714100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 841
+        width: 89
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6fd88a465e2ad980800000000000000
+      internalID: -8513441197437952150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 841
+        width: 93
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6d1fe2302e50150800000000000000
+      internalID: 5838320995256096465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_7
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 841
+        width: 93
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da1e5c99192bb9f90800000000000000
+      internalID: -6945761661868973651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_8
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 841
+        width: 92
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1106ef3f04d6c6b30800000000000000
+      internalID: 4281917471461367825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_9
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 841
+        width: 95
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09b7dd29cc4757c0800000000000000
+      internalID: -4082710110246815478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 588
+        width: 92
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994c0602e3d38fa90800000000000000
+      internalID: -7280001460603927399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_11
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 588
+        width: 93
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a138a19a3e7b0a970800000000000000
+      internalID: 8764207063285531418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_12
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 588
+        width: 93
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2036e2de022b3b20800000000000000
+      internalID: 3115121014320017451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_13
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 585
+        width: 89
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf87306dbf8b0680800000000000000
+      internalID: -8787772204357546062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_14
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 585
+        width: 89
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ecf938385af3ee70800000000000000
+      internalID: 9143426925299629287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_15
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 329
+        width: 86
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d62f2c377294560800000000000000
+      internalID: 7298408049275989276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_16
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 329
+        width: 86
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c361f7f57807fb4b0800000000000000
+      internalID: -5422491699605727684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_17
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 329
+        width: 84
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f479529ce11a65640800000000000000
+      internalID: 5068415584247846735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_18
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 329
+        width: 90
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd73a6db06abbbaf0800000000000000
+      internalID: -379504818925193253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_19
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 329
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1973a3e72ad8b70800000000000000
+      internalID: 8902950701407637938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_20
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 72
+        width: 89
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1dfc3b82d2675a20800000000000000
+      internalID: 3051015928985484571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_21
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 72
+        width: 90
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9bcbd9b610b8b200800000000000000
+      internalID: 196100195444575135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_22
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 72
+        width: 90
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13cf981565fe8440800000000000000
+      internalID: 4940155655825638175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Around_23
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 72
+        width: 92
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9c9796f805e7e80800000000000000
+      internalID: -8179011296378107445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Look Around_0: 4391515023638932231
+      Look Around_1: 545779802686865394
+      Look Around_10: -7280001460603927399
+      Look Around_11: 8764207063285531418
+      Look Around_12: 3115121014320017451
+      Look Around_13: -8787772204357546062
+      Look Around_14: 9143426925299629287
+      Look Around_15: 7298408049275989276
+      Look Around_16: -5422491699605727684
+      Look Around_17: 5068415584247846735
+      Look Around_18: -379504818925193253
+      Look Around_19: 8902950701407637938
+      Look Around_2: 7775652670262735841
+      Look Around_20: 3051015928985484571
+      Look Around_21: 196100195444575135
+      Look Around_22: 4940155655825638175
+      Look Around_23: -8179011296378107445
+      Look Around_3: 3586496521023898654
+      Look Around_4: -4570989680014714100
+      Look Around_5: -8513441197437952150
+      Look Around_6: 5838320995256096465
+      Look Around_7: -6945761661868973651
+      Look Around_8: 4281917471461367825
+      Look Around_9: -4082710110246815478
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
